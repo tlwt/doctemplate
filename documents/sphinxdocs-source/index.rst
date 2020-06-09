@@ -12,9 +12,17 @@ Welcome to Demo project's documentation!
 
 
 
+Links to other documentation
+============================
+
+* Doxygen_ source code documentation
+* Download this manual as PDF
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. _Doxygen: ../../doxygen/html/index.html
