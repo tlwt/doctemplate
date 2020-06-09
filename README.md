@@ -1,21 +1,24 @@
 # doctemplate
-project documentation template
+
+This repository provides help in generating sphinx doc user manual and doxygen source code documentation.
+
+
+
 
 ## Sphinx-Doc generate output
 
-Edit the documents in `./documents/source` directory.
+Edit the documents in `./documents/sphinxdocs-source` directory. Make sure the conf.py contains your project name.
 
-### generate output
-To generate output as HTML, EPUB or PDF run the following commands. In case you get some error like `*** No rule to make target '...'.  Stop.` then you have the directory settings wrong.
+## Doxygen output
+Edit the documents in `./documents/doxygen-source` directory. Make sure the doxygen-conf contains your project name.
 
-Output HTML
 
-```
-docker run --rm -v $(PWD)/documents:/docs sphinxdoc/sphinx make html
-```
+# execute
 
-Output PDF (*watch out - the container is sphinx-latex and not sphinx here*)
+just run
 
 ```
-docker run --rm -v /path/to/documents:/docs sphinxdoc/sphinx-latexpdf make latexpdf
+docker-compose up
 ```
+
+output will be created in the `documents` folder under `/doxygen` and `/sphinxdocs`
