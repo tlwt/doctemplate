@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Demo project'
-copyright = '2020, NXP Semiconductors Germany GmbH, Till Witt'
-author = 'NXP Semiconductors Germany GmbH, Till Witt'
+copyright = '2020, Till Witt'
+author = 'Till Witt'
 
 
 # -- General configuration ---------------------------------------------------

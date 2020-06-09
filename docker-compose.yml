@@ -10,7 +10,7 @@ services:
     command: sh -c "doxygen /tmp/Doxygen-source/doxygen-config"
 #    command: sh -c "doxygen /tmp/Doxygen/doxygen-config && (cd /tmp/Doxygen/output/latex && make pdf)"
 
-#  sphinxdoc:
-#    build: ./docker/sphinxdocs
-#    volumes:
-#      - ./documents:/docs
+  sphinxdoc:
+    build: ./docker/sphinxdocs
+    volumes:
+      - ./documents:/docs
