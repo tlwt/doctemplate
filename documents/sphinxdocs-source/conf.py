@@ -17,9 +17,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Demo project'
-copyright = '2020, Till Witt'
-author = 'Till Witt'
+import os
+
+project = os.environ['PROJECT_NAME']
+copyright = os.environ['YEAR'] + ' ' + os.environ['AUTHOR']
+author = os.environ['AUTHOR']
 
 
 # -- General configuration ---------------------------------------------------

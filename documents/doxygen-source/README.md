@@ -22,8 +22,3 @@ docker-compose up
 ```
 
 output will be created in the `documents` folder under `/doxygen` and `/sphinxdocs`
-
-
-# additional material
-
-https://docutils.sourceforge.io/docs/user/rst/quickref.html#external-hyperlink-targets
