@@ -5,8 +5,9 @@ services:
     build: ./docker/doxygen
     volumes:
       - ./documents/doxygen:/tmp/Doxygen/
+      - ./documents/doxygen-source:/tmp/Doxygen-source/
       - ./sources/:/tmp/sources
-    command: sh -c "doxygen /tmp/Doxygen/doxygen-config"
+    command: sh -c "doxygen /tmp/Doxygen-source/doxygen-config"
 #    command: sh -c "doxygen /tmp/Doxygen/doxygen-config && (cd /tmp/Doxygen/output/latex && make pdf)"
 
 #  sphinxdoc:

@@ -1,4 +1,4 @@
 .DS_Store
-documents/build
-documents/doxygen/output
+documents/sphinxdocs
+documents/doxygen
 sources
