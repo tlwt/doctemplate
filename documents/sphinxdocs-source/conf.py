@@ -19,9 +19,9 @@
 
 import os
 
-project = os.environ['PROJECT_NAME']
-copyright = os.environ['YEAR'] + ' ' + os.environ['AUTHOR']
-author = os.environ['AUTHOR']
+project = "Test"
+copyright = "2020"
+author = "Till"
 
 
 # -- General configuration ---------------------------------------------------

@@ -1,19 +1,28 @@
 version: '3'
 
 services:
-  doxygen:
-    build: ./docker/doxygen
+  all:
+    build: ./docker/allinone
     env_file:
       - ./documents/document-variables.env
     volumes:
       - ./documents/doxygen:/tmp/Doxygen/
       - ./documents/doxygen-source:/tmp/Doxygen-source/
-      - ./sources/:/tmp/sources
-    command: sh -c "doxygen /tmp/Doxygen-source/doxygen-config"
-
-  sphinxdoc:
-    build: ./docker/sphinxdocs
-    env_file:
-      - ./documents/document-variables.env
-    volumes:
       - ./documents:/docs
+      - ../TACNET src code/:/tmp/sources
+    #command: sh -c "ls -la /tmp/ && doxygen /tmp/Doxygen-source/doxygen-config"
+
+#  sphinxdoc:
+#    build: ./docker/sphinxdocs
+#    env_file:
+#      - ./documents/document-variables.env
+#    volumes:
+#      - ./documents:/docs
+#
+#  webserver:
+#    image: pierrezemb/gostatic:latest
+#    volumes:
+#      - ./documents:/srv/http
+#    ports:
+#      - 8080:8043
+#    command: /usr/bin/hastatic
