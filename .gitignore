@@ -1,4 +1,5 @@
 .DS_Store
 documents/sphinxdocs
 documents/doxygen
-sources
+sources/*
+!*sources/sample.php

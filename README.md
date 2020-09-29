@@ -11,35 +11,22 @@ This repository provides help in generating sphinx doc user manual and doxygen s
 
 ## How do I run this on my code?
 Repeat the previous steps but:
-1. make sure your source code is in the `sources` directory (or point it to the right location within the `docker-compose.yml`)
+1. make sure your source code is in the `/sources` directory (or point it to the right location within the `docker-compose.yml` ==> see line `- ./sources/:/tmp/sources`)
 2. adapt the `/documents/document-variables.env` to reflect your project settings.
 3. run `docker-compose up` (this time it should run faster)
 
-
-
 ### The tech details
 
+#### /docker
+holds the docker files, likely no need to change anything
+
+#### /documents
+holds both input and output files for the documentation
 
 
-## Sphinx-Doc generate output
-
-Edit the documents in `./documents/sphinxdocs-source` directory. Make sure the conf.py contains your project name.
-
-## Doxygen output
-Edit the documents in `./documents/doxygen-source` directory. Make sure the doxygen-conf contains your project name.
+##### /documents/sphinxdocs-sources
+Modify these files to generate your user manual
 
 
-# execute
-
-just run
-
-```
-docker-compose up
-```
-
-output will be created in the `documents` folder under `/doxygen` and `/sphinxdocs`
-
-
-# additional material
-
+## helpful links
 https://docutils.sourceforge.io/docs/user/rst/quickref.html#external-hyperlink-targets
