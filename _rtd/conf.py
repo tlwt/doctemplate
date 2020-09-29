@@ -20,3 +20,5 @@
 project = "Project documentation template"
 copyright = "2020"
 author = "Till S. Witt"
+
+extensions = ['recommonmark']
