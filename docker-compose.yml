@@ -17,9 +17,3 @@ services:
       - ./documents/document-variables.env
     volumes:
       - ./documents:/docs
-
-#  sphinxdoclatex:
-#    build: ./docker/sphinxdocslatex
-#    volumes:
-#      - ./documents:/docs
-#    command: make latexpdf
