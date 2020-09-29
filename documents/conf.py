@@ -17,6 +17,6 @@
 
 # -- Project information -----------------------------------------------------
 
-project = Project documentation template
-copyright = 2020
-author = Till S. Witt
+project = "Project documentation template"
+copyright = "2020"
+author = "Till S. Witt"
