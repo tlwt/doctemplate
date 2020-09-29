@@ -24,8 +24,10 @@ Repeat the previous steps but:
 1. make sure your documentation is in `/documents/sphinxdocs-sources`  (or point it to the right location within the `docker-compose.yml` ==> see line `- ./sources/:/tmp/sources`)
 
 
-### The tech details
+-----
+# The tech details
 
+## Folders 
 #### /docker
 holds the docker files, likely no need to change anything
 
