@@ -7,4 +7,4 @@ version: 2
 
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
-  configuration: documents/sphinxdocs-sources/rtd-conf.py
+  configuration: documents/sphinxdocs-source/rtd-conf.py
