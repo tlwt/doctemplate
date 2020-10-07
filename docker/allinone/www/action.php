@@ -191,7 +191,7 @@
 //        echo $retval;
         echo "</textarea></pre>";
 
-        echo "updating complete at " . date('Y-m-d h:i:s', time());
+        echo "updating complete at " . date('Y-m-d H:i:s', time());
       }
     }
 
@@ -205,32 +205,9 @@
 <!-- <meta http-equiv="refresh" content="5; URL=./sphinxdocs/index.html"> -->
 </head>
 <body>
-<h1>Document generation</h1>
+<h1>doc template</h1>
+Status: <?php echo date('Y-m-d', time()); ?> - <?php echo date('H:i:s', time()); ?>
+<p>please select the documents you whish to see or generate from the menu bar.</p>
+<p>The document generation takes some time. Be paitient and dont click again.</p>
 
-<table border=1>
-  <tr>
-    <td><a href="./">Home</a></td>
-    <td><?php echo date('Y-m-d', time()); ?></td>
-    <td><?php echo date('h:i:s', time()); ?></td>
-  </tr>
-  <tr>
-    <td>Sphinxdocs</td>
-    <td><a href="/docs/sphinxdocs/index.html">Show</a></td>
-    <td><a href="./?action=sphinxdocs">Generate</a></td>
-  </tr>
-  <tr>
-    <td>Doxygen</td>
-    <td><a href="/docs/doxygen/html/index.html">Show</a></td>
-    <td><a href="./?action=doxygen">Generate</a></td>
-  </tr>
-  <tr>
-    <td>Debug</td>
-    <td><a href="./?action=showDir">Show folder content</a></td>
-    <td><a href="./?action=phpinfo">Show php info</a></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><a href="./pheditor.php">PhEditor</a></td>
-    <td>&nbsp;</td>
-  </tr>
 </html>

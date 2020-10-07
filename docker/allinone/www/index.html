@@ -1,6 +1,155 @@
+<!--https://codepen.io/skeurentjes/pen/jasfd-->
 <html>
-  <frameset rows="50, *" border=0>
-    <frame src="navigation.php" name="navigation">
-    <frame src="pheditor.php" name="content">
-  </frameset>
+<head>
+  <style>
+
+body {
+  background: #d4d4d4;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #666;
+}
+
+.clear {
+  clear: both;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: solid 3px #fff;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  min-height: 100px;
+  background: #ED6B16;
+  border-radius: 10px 10px 0 0;
+}
+
+.footer {
+  min-height: 200px;
+  padding: 20px;
+  background: #e4e4e4;
+  border-radius: 0 0 10px 10px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgb(58,58,58);
+  border-top: solid 3px #fff;
+  border-bottom: solid 3px #fff;
+  /*
+  box-shadow:  0px -2px 3px -1px rgba(0, 0, 0, 1);
+  */
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation li:hover {
+  background: #222;
+}
+
+.navigation li:first-child {
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.navigation li a {
+  display: block;
+  padding: 0 20px;
+  text-decoration: none;
+  line-height: 40px;
+  color: #fff;
+}
+
+.navigation ul {
+  display: none;
+  position: absolute;
+  list-style: none;
+  margin-left: -3px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation ul li {
+  float: none;
+}
+
+.navigation li:hover > ul {
+  display: block;
+  background: #222;
+  border: solid 3px #fff;
+  border-top: 0;
+
+  -webkit-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+
+  -webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.navigation li:hover > ul li:hover {
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.navigation li li a:hover {
+  background: #000;
+}
+
+.navigation ul li:last-child a,
+.navigation ul li:last-child a:hover {
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+    </style>
+  </head>
+<body>
+<div class="wrapper">
+
+  <div class="top">
+  </div>
+
+  <ul class="navigation">
+    <li><a href="" title="Home">Home</a></li>
+    <li><a href="/docs/sphinxdocs/index.html" title="Show" target="content">SphinxDocs</a>
+      <ul>
+        <li><a href="./action.php?action=sphinxdocs" title="Show" target="content">generate</a></li>
+      </ul>
+    </li>
+    <li><a href="/docs/doxygen/html/index.html" title="Show" target="content">Doxygen</a>
+      <ul>
+        <li><a href="./action.php?action=doxygen" title="Show" target="content">generate</a></li>
+      </ul>
+      <li><a href="#" title="Show">Tools</a>
+        <ul>
+          <li><a href="./pheditor.php" title="Show" target="content">File editor</a></li>
+          <li><a href="./action.php?action=phpinfo" title="Show" target="content">php info</a></li>
+          <li><a href="./action.php?action=showDir" title="Show" target="content">folder contents</a></li>
+        </ul>
+    </li>
+    <div class="clear"></div>
+  </ul>
+
+  <div class="footer">
+     <iframe src="action.php" title="documentation display" width="100%" height="600px" name="content"></iframe>
+  </div>
+
+</div>
+</body>
 </html>
