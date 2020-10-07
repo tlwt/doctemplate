@@ -27,12 +27,16 @@
 
         $this->config = $config;
 
+        $error = new \stdClass();
+
         // do some sanity check
-        $this->checkSetup();
-        if ($this->error) $this->echoErrors();
 
         // running the logic
         $this->run();
+        $this->checkSetup();
+
+        if ($this->error) $this->echoErrors();
+
       }
 
 
@@ -41,7 +45,12 @@
        **/
       private function run() {
         // checking if an action has been provided
-        if (!isset($_GET['action'])) return;
+        if (!isset($_GET['action'])) {
+          echo '<h1>doc template</h1>
+          Status: ' . date('Y-m-d H:i:s', time()) . '<p>please select the documents you whish to see or generate from the menu bar.</p>
+          <p>The document generation takes some time. Be paitient and dont click again.</p>';
+          return;
+        }
 
         // fixing errors first
         // copying doxygen config from repo in case user does want one
@@ -197,17 +206,18 @@
 
 
     // instanciation
-    $dt = new doctemplate();
- ?>
-<html>
-<head>
-  <title>Documentation</title>
-<!-- <meta http-equiv="refresh" content="5; URL=./sphinxdocs/index.html"> -->
-</head>
-<body>
-<h1>doc template</h1>
-Status: <?php echo date('Y-m-d', time()); ?> - <?php echo date('H:i:s', time()); ?>
-<p>please select the documents you whish to see or generate from the menu bar.</p>
-<p>The document generation takes some time. Be paitient and dont click again.</p>
 
-</html>
+ ?>
+
+ <html>
+ <head>
+   <title>Documentation</title>
+ <!-- <meta http-equiv="refresh" content="5; URL=./sphinxdocs/index.html"> -->
+ </head>
+ <body>
+   <?php
+    $dt = new doctemplate();
+   ?>
+
+
+ </html>
