@@ -100,7 +100,8 @@
       }
 
       private function runSphinxdocs() {
-        $this->outputShell('sphinx-build -b html ' . $this->config->sphinxDir . ' /docs/sphinxdocs', "updating Sphinxdocs");
+        $this->outputShell('sphinx-build -b latexpdf ' . $this->config->sphinxDir . ' /docs/sphinxdocs', "updating Sphinxdocs");
+
       }
 
       /**

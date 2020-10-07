@@ -7,6 +7,5 @@ services:
       - ./docker/allinone:/repo
       - ./docs:/docs
       - ./src:/src
-
     ports:
       - 8080:80

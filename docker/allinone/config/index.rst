@@ -15,7 +15,6 @@ Welcome!
 Links to other documentation
 ============================
 
-* Doxygen_ source code documentation
 * Download this manual as PDF
 
 Indices and tables
@@ -24,5 +23,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. _Doxygen: ../../doxygen/html/index.html
