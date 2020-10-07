@@ -2,7 +2,11 @@
 
 [![SCRATCh - funded by BMBF](https://img.shields.io/badge/part%20of-SCRATCh-yellow)](scratch-itea3.eu/)
 ![SCRATCh - funded by BMBF](https://img.shields.io/badge/funded%20by-BMBF-blue)
-![](https://img.shields.io/badge/supported%20by-ITEA3-orange)
+[![ITEA3](https://img.shields.io/badge/supported%20by-ITEA3-orange)](https://www.itea3.org)
+
+[![Documentation Status](https://readthedocs.org/projects/projectdoctemplate/badge/?version=latest)](https://projectdoctemplate.readthedocs.io/en/latest/?badge=latest)
+![](https://img.shields.io/docker/image-size/tlwt/doctemplate)
+![](https://img.shields.io/github/repo-size/tlwt/doctemplate)
 
 This repository provides help in generating sphinx doc ("user manual") and doxygen ("source code") documentation. It provides a docker setup, which should run on any machine. The first run usually takes a few minutes as the docker containers are build for the first time.
 
