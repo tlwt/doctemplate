@@ -6,37 +6,60 @@
 
 This repository provides help in generating sphinx doc ("user manual") and doxygen ("source code") documentation. It provides a docker setup, which should run on any machine. The first run usually takes a few minutes as the docker containers are build for the first time.
 
-## Step 1 - How do I run this?
+## How do I run this?
 
-1. git clone this project to your machine
-2. run `docker-compose up` (again first run will take a few minutes)
-3. open `/documents/index.html` and enjoy your documentation.
+If you have a docker-compose in place just add the following lines to it:
+make sure that your local directories for the documentation and source code is reflected.
+
+### Integrate into your docker compose
+
+Just add it as a part of your services:
+
+```
+version: '2'
+
+services:
+  doc:
+    image: tlwt/doctemplate
+    volumes:
+      - ./documentation:/docs
+      - ./src:/src
+    ports:
+      - 8080:80
+```
+
+### Run it as docker command
+
+alternatively you can just execute the following docker run command
+
+```
+docker run -p 8080:80 -v $(PWD)/documentation:/docs -v $(PWD)/src:/src tlwt/doctemplate
+```
+
+You then only need to open http://localhost:8080 and follow the instructions there.
+The generation of documents still takes a while - please don't click while it run. I'll need to integrate some kind of indicator that the system is still running.
 
 
-## Step 2 - How do I run this on my code?
-Repeat the previous steps but:
-1. make sure your source code is in the `/sources` directory (or point it to the right location within the `docker-compose.yml` ==> see line `- ./sources/:/tmp/sources`)
-2. adapt the `/documents/document-variables.env` to reflect your project settings.
-3. run `docker-compose up` (this time it should run faster)
 
-## Step 3- How do I update the user manual
-Repeat the previous steps but:
-1. make sure your documentation is in `/documents/sphinxdocs-sources`  (or point it to the right location within the `docker-compose.yml` ==> see line `- ./sources/:/tmp/sources`)
+## additional information
+
+You should probably add the output directories to your `.gitignore` file.
+
+```
+docs/sphinxdocs/*
+docs/doxygen/*
+```
 
 
 -----
 # The tech details
 
-## Folders 
+## Folders
 #### /docker
 holds the docker files, likely no need to change anything
 
 #### /documents
-holds both input and output files for the documentation
-
-
-##### /documents/sphinxdocs-sources
-Modify these files to generate your user manual
+holds both input and output files for the documentation. The system will generate necessary files for you.
 
 
 ## helpful links
