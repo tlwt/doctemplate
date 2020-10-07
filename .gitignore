@@ -1,7 +1,7 @@
 .DS_Store
-documents/sphinxdocs/*
-documents/doxygen/*
+docs/sphinxdocs/*
+docs/doxygen/*
 sources/*
 !*sources/sample.php
-!*documents/sphinxdocs/Readme.md
-!*documents/doxygen/Readme.md
+!*docs/sphinxdocs/Readme.md
+!*docs/doxygen/Readme.md

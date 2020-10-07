@@ -23,6 +23,7 @@ project = "Test"
 copyright = "2020"
 author = "Till"
 
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 
