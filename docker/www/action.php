@@ -55,7 +55,7 @@
         // fixing errors first
         // copying doxygen config from repo in case user does want one
         if ($_GET['action']=="createDoxygenConfig") {
-          $this->outputShell('mkdir -p ' . $this->config->doxygenDir . ' && cp /repo/config/' . $this->config->doxygenConfigFile . ' ' . $this->config->doxygenDir, "updating Doxygen");
+          $this->outputShell('mkdir -p ' . $this->config->doxygenDir . ' && cp /repo/config/' . $this->config->doxygenConfigFile . ' ' . $this->config->doxygenDir, "Creating config file for Doxygen");
         }
 
         // copying sphinx config from repo in case user does want one
@@ -65,7 +65,7 @@
 
         // copying sphinx config from repo in case user does want one
         if ($_GET['action']=="createSphinxIndex") {
-          $this->outputShell('mkdir -p ' . $this->config->sphinxDir . ' && cp /repo/config/' . $this->config->sphinxIndexFile . ' ' . $this->config->sphinxDir, "updating Sphinxdocs");
+          $this->outputShell('mkdir -p ' . $this->config->sphinxDir . ' && cp /repo/config/' . $this->config->sphinxIndexFile . ' ' . $this->config->sphinxDir, "Creating index file for Sphinxdocs");
         }
 
         if ($this->error) {
@@ -100,7 +100,7 @@
       }
 
       private function runSphinxdocs() {
-        $this->outputShell('sphinx-build -b latexpdf ' . $this->config->sphinxDir . ' /docs/sphinxdocs', "updating Sphinxdocs");
+        $this->outputShell('sphinx-build -b html ' . $this->config->sphinxDir . ' /docs/sphinxdocs', "updating Sphinxdocs");
 
       }
 
@@ -185,9 +185,11 @@
        **/
       private function echoErrors() {
           echo '<font color="red"><h1>SETUP ERROR</h1>';
+          echo '<ul>';
           foreach ($this->errorMsg as $val) {
-            echo "<li>$val";
+            echo "<li>$val</li>";
           }
+          echo '</ul>';
           echo '</font>';
       }
 

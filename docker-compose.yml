@@ -2,9 +2,9 @@ version: '3'
 
 services:
   all:
-    build: ./docker/allinone
+    build: ./docker
     volumes:
-      - ./docker/allinone:/repo
+      - ./docker:/repo
       - ./docs:/docs
       - ./src:/src
     ports:

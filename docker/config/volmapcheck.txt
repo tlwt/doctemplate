@@ -1,0 +1,2 @@
+file is needed to check working volume mapping.
+If this file exists within the container the correspondig path has not been mapped properly
